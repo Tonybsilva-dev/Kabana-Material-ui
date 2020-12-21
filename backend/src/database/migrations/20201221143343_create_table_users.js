@@ -13,8 +13,8 @@ exports.up = knex => knex.schema.createTable('users', table => {
     table.string('street')
     table.string('suite')
     table.string('zip_code')
-    table.integer('lat')
-    table.integer('lng')
+    table.string('lat')
+    table.string('lng')
 
     table.timestamp('created_at').defaultTo(knex.fn.now())
     table.timestamp('updated_at').defaultTo(knex.fn.now())
